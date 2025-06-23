@@ -33,7 +33,7 @@ public class ClienteController {
                     .fechaRegistro(clienteSave.getFechaRegistro())
                     .build();
             return new ResponseEntity<>(MensajeResponse.builder()
-                    .mensaje("Guardado correctamente")
+                    .mensaje("Persona creada: " + clienteDTO.getNombre() + " " + clienteDTO.getApellido() + ", correctamente")
                     .objeto(clienteDTO)
                     .build(), HttpStatus.CREATED);
         } catch(DataAccessException exDta) {
